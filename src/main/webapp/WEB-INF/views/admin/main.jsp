@@ -4,7 +4,7 @@
 <script src="/resources/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/resources/dist/js/pages/dashboard.js"></script>
-    
+
 
     <!-- Content Header (Page header) -->
     <div class="content-header">
