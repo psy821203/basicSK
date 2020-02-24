@@ -149,11 +149,33 @@
        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
          <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
          <li class="nav-item">
-           <a href="/jsGrid.do" class="nav-link active">
+           <a href="/list.do" class="nav-link active">
              <i class="nav-icon fas fa-table"></i>
-             <p>
-               jsGrid
-             </p>
+             <p>기본 게시판</p>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a href="/reply.do" class="nav-link">
+             <i class="nav-icon fas fa-table"></i>
+             <p>기본 게시판 - 댓글</p>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a href="/addMenu.do" class="nav-link">
+             <i class="nav-icon fas fa-circle"></i>
+             <p>메뉴관리</p>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a href="#" class="nav-link">
+             <i class="nav-icon fas fa-circle"></i>
+             <p>파일 업로드/다운로드</p>
+           </a>
+         </li>
+         <li class="nav-item">
+           <a href="#" class="nav-link">
+             <i class="nav-icon fas fa-circle"></i>
+             <p>퀴즈</p>
            </a>
          </li>
          <li class="nav-header">MULTI LEVEL EXAMPLE</li>
