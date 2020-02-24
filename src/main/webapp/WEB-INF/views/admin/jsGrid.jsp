@@ -4,8 +4,8 @@
 $(function () {
   $("#jsGrid1").jsGrid({
       height: "100%",
-      width: "100%",
-      sorting: true, 
+      width: "100%", 
+      sorting: true,  
       paging: true,  
       fields: [
           { name: "Name", type: "text", width: 150 },
