@@ -6,7 +6,7 @@ $(function () {
       height: "100%",
       width: "100%",
       sorting: true,
-      paging: true,
+      paging: true, 
       fields: [
           { name: "Name", type: "text", width: 150 },
           { name: "Age", type: "number", width: 50 },
