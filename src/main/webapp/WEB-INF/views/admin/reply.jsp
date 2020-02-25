@@ -25,6 +25,10 @@ ul.comment-photo span.previewClose { position: absolute; right: 9px; color: #fff
 
 .card-comments .username { font-size: 13px; }
 .img-circle { padding: 4px; background: #fff; }
+
+/* 숨기기 */
+.display-none { display: none; }
+
 </style>
 
 <script type="text/javascript">
@@ -41,9 +45,19 @@ ul.comment-photo span.previewClose { position: absolute; right: 9px; color: #fff
         });
         
         $('.add-comment').click(function(e){
-        	// add-comment
-        	var html = $('.comment-input-group').clone(true);
-        	$(this).parents().find('.comment-area').append(html);
+        	// 댓글 영역 복제
+        	var html = $('#parent-commentGoup').clone(true);
+        	
+        	// 댓글버튼 활성화
+        	$(".commont-btn").contents().find("span.add-comment").removeClass("display-none");
+        	// 이전에 추가된 댓글입력창 제거
+        	$(".comment-text .comment-input-group").remove();
+        	
+        	// 댓글추가 버튼 숨기기
+        	$(this).addClass("display-none");
+        	// 노드추가
+        	$(this).parent().parent().nextAll(".comment-area").append(html); 
+        	
         });
     });
 </script>
@@ -87,7 +101,7 @@ ul.comment-photo span.previewClose { position: absolute; right: 9px; color: #fff
 	 	    <div class="card-body comment">
 				<span class="text-muted">댓글 3</span>
 				<hr />
-				<div class="row comment-input-group">
+				<div id="parent-commentGoup" class="row comment-input-group">
 				      <input type="text" class="form-control form-control-sm" placeholder="댓글을 적어주세요.">
 				      <input type="file" class="fileTag" id="file1" name="file"  />
 				      
@@ -96,23 +110,14 @@ ul.comment-photo span.previewClose { position: absolute; right: 9px; color: #fff
 				        <span>등록</span>
 				      </div>
 			    </div>
-			    
-		    	<!-- /.input-group -->
+		    	<!-- /댓글(원글)입력창 -->
 				<ul class="list-inline comment-photo">
 					<li>
 						<span class="previewClose">X</span>
 						<img src="/resources/dist/img/photo1.png" alt="Attachment">
 					</li>
-					<li>
-						<span class="previewClose">X</span>
-						<img src="/resources/dist/img/photo1.png" alt="Attachment">
-					</li>
-					<li>
-						<span class="previewClose">X</span>
-						<img src="/resources/dist/img/photo1.png" alt="Attachment">
-					</li>
 				</ul>
-	          	<!-- 이미지 미리보기 -->
+	          	<!-- /이미지 미리보기 -->
 	 	    </div>
 	 	    
 	 		<div class="card-footer card-comments">
@@ -166,9 +171,7 @@ ul.comment-photo span.previewClose { position: absolute; right: 9px; color: #fff
 	                		네~ 적극 반영하도록 하겠습니다. <br/>
 	                		감사합니다.
 	                	</div>
-	                	
-	                	
-	                	<div class="col-12">
+	                	<!-- <div class="col-12">
 	                		<div class="row comment-input-group">
 							      <input type="text" class="form-control form-control-sm" placeholder="댓글을 적어주세요.">
 							      <input type="file" class="fileTag" id="file1" name="file"  />
@@ -184,7 +187,7 @@ ul.comment-photo span.previewClose { position: absolute; right: 9px; color: #fff
 									<img src="/resources/dist/img/photo1.png" alt="Attachment">
 								</li>
 							</ul>
-	                	</div>
+	                	</div> -->
 	                	
 	                </div>
 	            </div>
