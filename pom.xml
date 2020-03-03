@@ -211,6 +211,8 @@
                         <encoding>UTF-8</encoding>
                     </configuration>
                 </plugin>
+                
+                
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>hibernate3-maven-plugin</artifactId>
@@ -231,6 +233,8 @@
                         </dependency>
                     </dependencies>
                 </plugin>
+                
+                
                 <!-- EMMA -->
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
