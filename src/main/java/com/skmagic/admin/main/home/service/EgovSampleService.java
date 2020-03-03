@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package egovframework.example.sample.service;
+package com.skmagic.admin.main.home.service;
 
 import java.util.List;
 
@@ -35,9 +35,9 @@ import java.util.List;
  */
 public interface EgovSampleService {
 
-	List<SampleVO> selectSampleList(SampleVO vo)throws Exception;
+	//List<SampleVO> selectSampleList(SampleVO vo)throws Exception;
 
-	int insertSampleList(SampleVO vo) throws Exception;
+	//int insertSampleList(SampleVO vo) throws Exception;
 
 
 }

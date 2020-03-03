@@ -13,12 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package egovframework.example.sample.service.impl;
+package com.skmagic.admin.main.home.service.impl;
 
 import java.util.List;
 
-import egovframework.example.sample.service.SampleDefaultVO;
-import egovframework.example.sample.service.SampleVO;
+import com.skmagic.admin.main.home.service.SampleVO;
 
 import egovframework.rte.psl.dataaccess.mapper.Mapper;
 
@@ -39,10 +38,6 @@ import egovframework.rte.psl.dataaccess.mapper.Mapper;
  */
 @Mapper("sampleMapper")
 public interface SampleMapper {
-
-	List<SampleVO> selectSampleList(SampleVO vo)throws Exception;
-
-	int insertSample(SampleVO vo)throws Exception;
-
-
+	//List<SampleVO> selectSampleList(SampleVO vo)throws Exception;
+	//int insertSample(SampleVO vo)throws Exception;
 }

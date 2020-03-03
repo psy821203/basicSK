@@ -28,7 +28,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package egovframework.example.cmmn;
+package egovframework.skmagic.admin.example.cmmn;
 
 import egovframework.rte.fdl.cmmn.exception.handler.ExceptionHandler;
 

@@ -13,11 +13,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package egovframework.example.sample.service;
+package egovframework.skmagic.admin.example.cmmn;
+
+import egovframework.rte.fdl.cmmn.exception.handler.ExceptionHandler;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * @Class Name : SampleVO.java
- * @Description : SampleVO Class
+ * @Class Name : EgovSampleExcepHndlr.java
+ * @Description : EgovSampleExcepHndlr Class
  * @Modification Information
  * @
  * @  수정일      수정자              수정내용
@@ -31,38 +36,17 @@ package egovframework.example.sample.service;
  *
  *  Copyright (C) by MOPAS All right reserved.
  */
-public class SampleVO extends SampleDefaultVO {
+public class EgovSampleExcepHndlr implements ExceptionHandler {
 
-	private static final long serialVersionUID = 1L;
-	
-	private Integer no;
-	/** 아이디 */
-	private String id;
-	
-	private String nm;
-	
-	
-	public String getNm() {
-		return nm;
-	}
-	public void setNm(String nm) {
-		this.nm = nm;
-	}
-	public Integer getNo() {
-		return no;
-	}
-	public void setNo(Integer no) {
-		this.no = no;
-	}
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
+	private static final Logger LOGGER = LoggerFactory.getLogger(EgovSampleExcepHndlr.class);
 
-
+	/**
+	* @param ex
+	* @param packageName
+	* @see 개발프레임웍크 실행환경 개발팀
+	*/
+	@Override
+	public void occur(Exception ex, String packageName) {
+		LOGGER.debug(" EgovServiceExceptionHandler run...............");
+	}
 }

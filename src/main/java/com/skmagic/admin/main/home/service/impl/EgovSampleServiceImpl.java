@@ -13,13 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package egovframework.example.sample.service.impl;
+package com.skmagic.admin.main.home.service.impl;
 
 import java.util.List;
-
-import egovframework.example.sample.service.EgovSampleService;
-import egovframework.example.sample.service.SampleDefaultVO;
-import egovframework.example.sample.service.SampleVO;
 
 import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
 import egovframework.rte.fdl.idgnr.EgovIdGnrService;
@@ -29,6 +25,10 @@ import javax.annotation.Resource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
+import com.skmagic.admin.main.home.service.EgovSampleService;
+import com.skmagic.admin.main.home.service.SampleDefaultVO;
+import com.skmagic.admin.main.home.service.SampleVO;
 
 /**
  * @Class Name : EgovSampleServiceImpl.java
@@ -52,12 +52,12 @@ public class EgovSampleServiceImpl extends EgovAbstractServiceImpl implements Eg
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(EgovSampleServiceImpl.class);
 
-	// TODO mybatis 사용
+	/*// TODO mybatis 사용
 	 @Resource(name="sampleMapper")
 	 private SampleMapper mapper;
 
 
-	/** ID Generation */
+	*//** ID Generation *//*
 	@Resource(name = "egovIdGnrService")
 	private EgovIdGnrService egovIdGnrService;
 
@@ -71,5 +71,5 @@ public class EgovSampleServiceImpl extends EgovAbstractServiceImpl implements Eg
 	public int insertSampleList(SampleVO vo) throws Exception {
 		int result = mapper.insertSample(vo);
 		return result;
-	}
+	}*/
 }

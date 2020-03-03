@@ -13,16 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package egovframework.example.cmmn;
-
-import egovframework.rte.fdl.cmmn.exception.handler.ExceptionHandler;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.skmagic.admin.main.home.service;
 
 /**
- * @Class Name : EgovSampleExcepHndlr.java
- * @Description : EgovSampleExcepHndlr Class
+ * @Class Name : SampleVO.java
+ * @Description : SampleVO Class
  * @Modification Information
  * @
  * @  수정일      수정자              수정내용
@@ -36,17 +31,38 @@ import org.slf4j.LoggerFactory;
  *
  *  Copyright (C) by MOPAS All right reserved.
  */
-public class EgovSampleExcepHndlr implements ExceptionHandler {
+public class SampleVO extends SampleDefaultVO {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(EgovSampleExcepHndlr.class);
-
-	/**
-	* @param ex
-	* @param packageName
-	* @see 개발프레임웍크 실행환경 개발팀
-	*/
-	@Override
-	public void occur(Exception ex, String packageName) {
-		LOGGER.debug(" EgovServiceExceptionHandler run...............");
+	private static final long serialVersionUID = 1L;
+	
+	private Integer no;
+	/** 아이디 */
+	private String id;
+	
+	private String nm;
+	
+	
+	public String getNm() {
+		return nm;
 	}
+	public void setNm(String nm) {
+		this.nm = nm;
+	}
+	public Integer getNo() {
+		return no;
+	}
+	public void setNo(Integer no) {
+		this.no = no;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+
+
 }
