@@ -133,7 +133,7 @@ public class EgovSampleController {
 			return "admin/reply";
 		}
 	
-	// Template login ---
+	// Template login ---asdf
 	@RequestMapping(value = "/login.do")
 	public String showLogin(){
 		return "login/member/login";
