@@ -2,9 +2,12 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 
 <configuration>
-    <typeAliases>
+    <typeAliases>  
 		<typeAlias alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
-		<typeAlias alias="searchVO" type="egovframework.example.sample.service.SampleDefaultVO"/>
-		<typeAlias alias="sampleVO" type="egovframework.example.sample.service.SampleVO"/>
+		<!-- 샘플VO -->
+		<typeAlias alias="memberVO" type="egovframework.skmagic.admin.example.sample.service.MemberVO"/>
+		<typeAlias alias="searchVO" type="egovframework.skmagic.admin.example.sample.service.DefaultVO"/>
+		<typeAlias alias="sampleVO" type="com.skmagic.admin.main.home.service.SampleDefaultVO"/>
+		
     </typeAliases>
 </configuration>

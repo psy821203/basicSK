@@ -8,7 +8,7 @@
        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
      </li>
      <li class="nav-item d-none d-sm-inline-block">
-       <a href="/main.do" class="nav-link">Home</a>
+       <a href="/adminMainView.do" class="nav-link">Home</a>
      </li>
      <li class="nav-item d-none d-sm-inline-block">
        <a href="#" class="nav-link">Contact</a>
@@ -149,19 +149,19 @@
        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
          <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
          <li class="nav-item">
-           <a href="/list.do" class="nav-link active">
+           <a href="/userMainView.do" class="nav-link active">
              <i class="nav-icon fas fa-table"></i>
              <p>기본 게시판</p>
            </a>
          </li>
          <li class="nav-item">
-           <a href="/reply.do" class="nav-link">
+           <a href="#" class="nav-link">
              <i class="nav-icon fas fa-table"></i>
              <p>기본 게시판 - 댓글</p>
            </a>
          </li>
          <li class="nav-item">
-           <a href="/addMenu.do" class="nav-link">
+           <a href="#" class="nav-link">
              <i class="nav-icon fas fa-circle"></i>
              <p>메뉴관리</p>
            </a>
@@ -180,7 +180,7 @@
          </li>
          <li class="nav-header">MULTI LEVEL EXAMPLE</li>
          <li class="nav-item">
-           <a href="/login.do" class="nav-link">
+           <a href="#" class="nav-link">
              <i class="fas fa-circle nav-icon"></i>
              <p>로그인</p>
            </a>
