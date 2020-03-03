@@ -118,16 +118,22 @@ public class EgovSampleController {
 	// Template main
 	@RequestMapping(value = "/main.do")
 	public String showMain() {
-		return "main";
+		return "admin/main";
 	}
 	
 	// Template jsGrid
-	@RequestMapping(value = "/jsGrid.do")
+	@RequestMapping(value = "/list.do")
 	public String showGrid(){
-		return "jsGrid";
+		return "admin/list";
 	}
 	
-	// Template login
+	// Template jsGrid
+		@RequestMapping(value = "/reply.do")
+		public String test(){
+			return "admin/reply";
+		}
+	
+	// Template login --
 	@RequestMapping(value = "/login.do")
 	public String showLogin(){
 		return "login/member/login";
