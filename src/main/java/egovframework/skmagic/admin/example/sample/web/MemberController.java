@@ -105,7 +105,7 @@ public class MemberController {
 	 * @ @return 
 	 * @ @throws Exception
 	 */
-	@RequestMapping(value = "/insertUserTestView.do", method = RequestMethod.GET)
+	@RequestMapping(value = "/insertUserSampleView.do", method = RequestMethod.GET)
 	public String insertUserSampleView(@ModelAttribute("searchVO") DefaultVO searchVO, Model model) throws Exception {
 		model.addAttribute("memberVO", new MemberVO());
 		return "user/userRegist";
@@ -119,7 +119,7 @@ public class MemberController {
 	 * @return "forward:/egovSampleList.do"
 	 * @exception Exception
 	 */
-	@RequestMapping(value = "/insertTestUser.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/insertSampleUser.do", method = RequestMethod.POST)
 	public String insertSampleUser( @ModelAttribute("searchVO") DefaultVO searchVO
 						    , MemberVO memberVO
 						    , BindingResult bindingResult

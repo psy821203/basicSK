@@ -1,50 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="egovframework.skmagic.admin.sample.service.imple.MemberMapper">
-	<select id="selectMemberList2" parameterType="searchVO" resultType="egovMap">
-		SELECT USER_ID
-			 , PW
-			 , NAME
-			 , HP
-			 , GRADE_CD
-			 , MEMO
-			 , MY_IMAGE
-			 , GROUP_CD
-			 , PUSH_YN
-			 , REG_DT
-			 , BLOCK_DT
-			 , LEVAE_DT
-			 , USE_YN
-		  FROM sc_member_tb
-		 WHERE 1=1
-		 <if test="searchKeyword != null and searchKeyword != ''">
-	        <choose>
-	            <when test="searchCondition == 0">
-					AND	USER_ID LIKE '%' || #{searchKeyword} || '%'
-				</when>
-	            <when test="searchCondition == 1">
-					AND	NAME LIKE '%' || #{searchKeyword} || '%'
-				</when>
-			</choose>
-		</if>
-		ORDER BY ID ASC
-		LIMIT #{recordCountPerPage} OFFSET #{firstIndex}
+<mapper namespace="egovframework.skmagic.admin.example.sample.service.impl.MemberMapper">
+	<select id="selectSampleList" parameterType="searchVO" resultType="egovMap">
+			SELECT USER_ID
+				 , PW
+				 , NAME
+				 , HP
+				 , GRADE_CD
+				 , MEMO
+				 , MY_IMAGE
+				 , GROUP_CD
+				 , PUSH_YN
+				 , REG_DT
+				 , BLOCK_DT
+				 , LEVAE_DT
+				 , USE_YN
+			  FROM sample_member_tb
+			 WHERE 1=1
+			<if test="searchKeyword != null and searchKeyword != ''">
+		        <choose>
+		            <when test="searchCondition == 0">
+						AND	USER_ID LIKE CONCAT('%',#{searchKeyword},'%')
+					</when>
+		            <when test="searchCondition == 1">
+						AND	NAME LIKE CONCAT('%',#{searchKeyword},'%')
+					</when>
+				</choose>
+			</if>
+			 ORDER BY USER_ID ASC
+			 LIMIT #{recordCountPerPage} OFFSET #{firstIndex}
+	</select>
+
+	<select id="selectSampleListTotCnt" parameterType="searchVO" resultType="int">
+			SELECT COUNT(USER_ID) totcnt
+			  FROM sample_member_tb
+			 WHERE 1=1
+			<if test="searchKeyword != null and searchKeyword != ''">
+		        <choose>
+		            <when test="searchCondition == 0">
+						AND	USER_ID LIKE CONCAT('%',#{searchKeyword},'%')
+					</when>
+		            <when test="searchCondition == 1">
+						AND	NAME LIKE CONCAT('%',#{searchKeyword},'%')
+					</when>
+				</choose>
+			</if>
 	</select>
 	
-	<insert id="insertMember" parameterType="memberVO">
-		INSERT INTO sc_member_tb 
-				SET USER_ID = #{userId},
-					PW = #{pw},
-					NAME = #{name},
-					HP = #{hp},
-					GRADE_CD = #{gradeCd},
-					MEMO = #{memo},
-					MY_IMAGE = #{myImage},
-					GROUP_CD = #{groupCd},
-					PUSH_YN = #{pushYn},
-					REG_DT = SYSDATE(),
-					BLOCK_DT = SYSDATE(),
-					LEVAE_DT = SYSDATE(),
-					USE_YN = #{useYn}
+	<insert id="insertSampleUser" parameterType="memberVO">
+		INSERT INTO sample_member_tb 
+				SET USER_ID = #{userId}
+				  , PW = #{pw}
+				  ,	NAME = #{name}
+					<if test="hp != null and hp != ''">
+				  ,	HP = #{hp}
+					</if>
+				  ,	GRADE_CD = #{gradeCd}
+					<if test="memo != null and memo != ''">
+				  ,	MEMO = #{memo}
+					</if>
+					<if test="groupCd != null and groupCd != ''">
+				  ,	GROUP_CD = #{groupCd}
+					</if>
+					<if test="pushYn != null and pushYn != ''">
+				  ,	PUSH_YN = #{pushYn}
+					</if>
+				  ,	REG_DT = SYSDATE()
 	</insert>
 </mapper>

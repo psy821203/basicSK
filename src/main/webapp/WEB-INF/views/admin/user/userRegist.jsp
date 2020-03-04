@@ -16,7 +16,7 @@ function fn_egov_save() {
 	//if(!validateMemberVO(frm)){
     //    return;
     //}else{
-    	frm.action = "/insertUser.do";
+    	frm.action = "/insertSampleUser.do";
         frm.submit();
     //}
 }
@@ -137,9 +137,9 @@ function fn_egov_save() {
            </div>
            <!-- /.card-footer -->
          <!-- 검색조건 유지 -->
-		    <input type="text" name="searchCondition" value="<c:out value='${searchVO.searchCondition}'/>"/>
-		    <input type="text" name="searchKeyword" value="<c:out value='${searchVO.searchKeyword}'/>"/>
-		    <input type="text" name="pageIndex" value="<c:out value='${searchVO.pageIndex}'/>"/>
+		    <input type="hidden" name="searchCondition" value="<c:out value='${searchVO.searchCondition}'/>"/>
+		    <input type="hidden" name="searchKeyword" value="<c:out value='${searchVO.searchKeyword}'/>"/>
+		    <input type="hidden" name="pageIndex" value="<c:out value='${searchVO.pageIndex}'/>"/>
 		</form:form>
 		<!-- /.card-body -->
 	</div>
