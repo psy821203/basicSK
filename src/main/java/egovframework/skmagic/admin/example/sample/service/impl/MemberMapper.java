@@ -46,5 +46,5 @@ public interface MemberMapper {
 	 * @ @param mvo - 등록할 정보가 담긴 vo
 	 * @ @throws Exception
 	 */
-	void insertUser(MemberVO mvo) throws Exception;
+	void insertSampleUser(MemberVO mvo) throws Exception;
 }

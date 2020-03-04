@@ -149,7 +149,7 @@
        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
          <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
          <li class="nav-item">
-           <a href="/userMainView.do" class="nav-link active">
+           <a href="/userSampleMainView.do" class="nav-link active">
              <i class="nav-icon fas fa-table"></i>
              <p>기본 게시판</p>
            </a>

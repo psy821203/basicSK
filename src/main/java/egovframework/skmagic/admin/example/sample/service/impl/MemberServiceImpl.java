@@ -55,7 +55,7 @@ public class MemberServiceImpl extends EgovAbstractServiceImpl implements Member
 	 * @exception Exception
 	 */
 	@Override
-	public String insertUser(MemberVO mvo) throws Exception {
+	public String insertSampleUser(MemberVO mvo) throws Exception {
 		LOGGER.debug(mvo.toString());
 
 		/** ID Generation Service */
@@ -63,7 +63,7 @@ public class MemberServiceImpl extends EgovAbstractServiceImpl implements Member
 		//memberVo.setId(id);
 		//LOGGER.debug(memberVo.toString());
 
-		mapper.insertUser(mvo);
+		mapper.insertSampleUser(mvo);
 		return mvo.getUserId();
 	}
 }

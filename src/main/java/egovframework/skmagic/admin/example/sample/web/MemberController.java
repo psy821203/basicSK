@@ -45,21 +45,20 @@ public class MemberController {
 	/** Validator */
 	@Resource(name = "beanValidator")
 	protected DefaultBeanValidator beanValidator;
-
+	
 	
 	/**
 	 * @ 내용 : 메인 페이지
 	 * @ 작성자 : K.S.B
 	 * @ Method : adminMainView
 	 * @ @return
-	 * 
-	 * 다른 컨트롤러로 이동해야함.(현재 임시)
+	 * 임시
 	 */
 	@RequestMapping(value = "/adminMainView.do")
 	public String adminMainView() {
 		return "home/main";
 	}
-	
+
 	/**
 	 * @ 내용 : 회원 리스트 페이지
 	 * @ 작성자 : K.S.B
@@ -69,8 +68,8 @@ public class MemberController {
 	 * @ @return
 	 * @ @throws Exception
 	 */
-	@RequestMapping(value = "/userMainView.do")
-	public String userMainView(@ModelAttribute("searchVO") DefaultVO searchVO, ModelMap model) throws Exception {
+	@RequestMapping(value = "/userSampleMainView.do")
+	public String userSampleMainView(@ModelAttribute("searchVO") DefaultVO searchVO, ModelMap model) throws Exception {
 
 		/** EgovPropertyService.sample */
 		searchVO.setPageUnit(propertiesService.getInt("pageUnit")); 	// Record count per page
@@ -106,8 +105,8 @@ public class MemberController {
 	 * @ @return 
 	 * @ @throws Exception
 	 */
-	@RequestMapping(value = "/insertUserView.do", method = RequestMethod.GET)
-	public String insertUserView(@ModelAttribute("searchVO") DefaultVO searchVO, Model model) throws Exception {
+	@RequestMapping(value = "/insertUserTestView.do", method = RequestMethod.GET)
+	public String insertUserSampleView(@ModelAttribute("searchVO") DefaultVO searchVO, Model model) throws Exception {
 		model.addAttribute("memberVO", new MemberVO());
 		return "user/userRegist";
 	}
@@ -120,8 +119,8 @@ public class MemberController {
 	 * @return "forward:/egovSampleList.do"
 	 * @exception Exception
 	 */
-	@RequestMapping(value = "/insertUser.do", method = RequestMethod.POST)
-	public String insertUser( @ModelAttribute("searchVO") DefaultVO searchVO
+	@RequestMapping(value = "/insertTestUser.do", method = RequestMethod.POST)
+	public String insertSampleUser( @ModelAttribute("searchVO") DefaultVO searchVO
 						    , MemberVO memberVO
 						    , BindingResult bindingResult
 						    , Model model
@@ -136,8 +135,8 @@ public class MemberController {
 			return "user/userRegist";
 		}*/
 
-		memberService.insertUser(memberVO);
+		memberService.insertSampleUser(memberVO);
 		//status.setComplete();
-		return "forward:/userMainView.do";
+		return "forward:/userSampleMainView.do";
 	}
 }

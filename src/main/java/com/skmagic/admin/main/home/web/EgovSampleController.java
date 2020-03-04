@@ -15,15 +15,8 @@
  */
 package com.skmagic.admin.main.home.web;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springmodules.validation.commons.DefaultBeanValidator;
-
-import com.skmagic.admin.main.home.service.EgovSampleService;
-
-import egovframework.rte.fdl.property.EgovPropertyService;
 
 /**
  * 

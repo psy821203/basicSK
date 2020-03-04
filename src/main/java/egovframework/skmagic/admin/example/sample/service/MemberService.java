@@ -45,6 +45,6 @@ public interface MemberService {
 	 * @ @return
 	 * @ @throws Exception
 	 */
-	String insertUser(MemberVO memberVo) throws Exception;
+	String insertSampleUser(MemberVO memberVo) throws Exception;
 }
 
