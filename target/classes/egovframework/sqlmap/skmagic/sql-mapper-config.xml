@@ -19,6 +19,7 @@
 		<typeAlias alias="memberVO" type="egovframework.skmagic.admin.example.sample.service.MemberVO"/>
 		<typeAlias alias="searchVO" type="egovframework.skmagic.admin.example.sample.service.DefaultVO"/>
 		<typeAlias alias="sampleVO" type="com.skmagic.admin.main.home.service.SampleDefaultVO"/>
+		<typeAlias alias="NoticeVO" type="com.skmagic.admin.bbs.notice.service.NoticeVO"/>
 		
     </typeAliases>
 </configuration>
